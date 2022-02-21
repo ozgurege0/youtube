@@ -76,17 +76,14 @@ if (isset($_POST['submit'])){
             </div>
             <?php
      if($isVideoIdValid=="0"){ ?>
-      <div class="instruction_box">
          <label><i class='bx bx-unlink'></i></label>
          <h3>Yanlış Url!</h3>
           <p>Girdiğiniz linki kontrol edin.</p>
-       </div>
      <?php }else if($isvalid==""){ ?>
       <p class="text-center mt-5">Ozgur_Medya 2022</p>
 
     <?php }else if($isvalid=="OK"){ ?>
-      <div class="video_detail_box">
-    <div class="thumbnail_box">
+
     
           <div class="text-center">
           <img src="<?php echo $thumbnail; ?>" alt="thumbnail">
@@ -94,8 +91,7 @@ if (isset($_POST['submit'])){
     
       <div class="text-center">
       <b>Kapak Resmini İndir: </b><a href="download_img.php?url=<?php echo $thumbnail; ?>&name=<?php echo $title; ?>" id="img_download_btn"><button class="btn btn-secondary mt-3" ><i class='bx bxs-download'></i></button></a>
-      </div>
-    </div>
+
 
 <?php if(!empty($formats)){
   
@@ -152,11 +148,9 @@ if (isset($_POST['submit'])){
 
 <?php } } }else{ ?>
 
-     <div class="instruction_box">
        <label><i class='bx bx-video-off'></i></label>
        <h3>Video bilgisini alamıyoruz...</h3>
        <p>Girdiğiniz linki kontrol edebilirsiniz, bizde yanlış olmaz.</p>
-     </div>
 
   <?php } ?>
 
